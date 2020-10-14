@@ -1,20 +1,26 @@
 {
-    "name": "k9barry/php-microsoft-teams-connector",
+    "name": "sebbmeyer/php-microsoft-teams-connector",
     "description": "PHP Microsoft Teams Connector",
     "keywords": ["teams", "microsoft", "connectors", "connector", "messagecard", "php"],
     "license": "MIT",
     "authors": [
         {
-            "name": "K9 Barry",
-            "email": "k9barry@gmail.com"
+            "name": "Sebastian Meyer",
+            "email": "sebbmyr@gmail.com"
         }
     ],
     "require": {
         "php": ">=5.4.0"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "git@github.com:k9barry/php-microsoft-teams-connector"
+        }
+    ],
     "autoload": {
         "psr-4": {
-            "K9barry\\Teams\\": "src/"
+            "Sebbmyr\\Teams\\": "src/"
         }
     },
     "minimum-stability": "dev"
