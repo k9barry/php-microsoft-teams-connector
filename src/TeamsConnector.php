@@ -1,4 +1,5 @@
 <?php
+global $logger;
 
 namespace Sebbmyr\Teams;
 
@@ -45,10 +46,10 @@ class TeamsConnector
                 throw new \Exception('Error response: ' . $result);
             }
         }
-        catch (Exception $e) {
-            MyEcho(__FILE__, __LINE__, '[TeamsConnector.php]', "Curl Error: curl_error($ch), curl_errno($ch)");
-            MyEcho(__FILE__, __LINE__, '[TeamsConnector.php]', "Error response: $result");
-            MyEcho(__FILE__, __LINE__, '[TeamsConnector.php]', "Exception: $e->getMessage()");
+        catch (\Exception $e) {
+            $logger->critical("[TeamsConnector.php] Curl Error: ".curl_error($ch).", ".curl_errno($ch)."");
+            $logger->critical("[TeamsConnector.php] Error response: ".$result."");
+            $logger->critical("[TeamsConnector.php] Exception: ".$e->getMessage()."");
             echo "Exception: $e->getMessage()";
         }
     }
