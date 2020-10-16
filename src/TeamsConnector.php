@@ -1,5 +1,4 @@
 <?php
-global $logger;
 
 namespace Sebbmyr\Teams;
 
