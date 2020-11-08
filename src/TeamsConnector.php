@@ -47,6 +47,7 @@ class TeamsConnector
             }
         }
         catch (\Exception $e) {
+            global $logger;
             $logger->critical("[TeamsConnector.php] Curl Error: ".curl_error($ch).", ".curl_errno($ch)."");
             $logger->critical("[TeamsConnector.php] Error response: ".$result."");
             $logger->critical("[TeamsConnector.php] Exception: ".$e->getMessage()."");
